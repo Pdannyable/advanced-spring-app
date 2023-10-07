@@ -1,0 +1,12 @@
+kind: Service   
+apiVersion: v1  
+metadata:
+  name: regappsvc
+spec:
+  selector:
+    app: reg
+  type: NodePort 
+  ports:
+  - targetPort: 8080
+    nodePort: 31414 
+    port: 8080
