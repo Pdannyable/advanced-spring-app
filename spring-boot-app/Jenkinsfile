@@ -31,7 +31,7 @@ pipeline {
     }*/	
     stage('Build and Push Docker Image') {
       environment {
-        DOCKER_IMAGE = "pdannyable/advanced-spring-app:${BUILD_NUMBER}"
+        DOCKER_IMAGE = "pdannyable/springboot:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "advanced-spring-app/spring-boot-app/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
       }

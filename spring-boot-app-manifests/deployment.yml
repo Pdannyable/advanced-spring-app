@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspringapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aspringapp
+  template:
+    metadata:
+      labels:
+        app: aspringapp
+    spec:
+      containers:
+        - name: aspringappcontainer
+          image: pdannyable/springboot:v2.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_DB_HOSTNAME
+              value:  mongosvc
+            - name: MONGO_DB_USERNAME
+              value: devdb
+            - name: MONGO_DB_PASSWORD
+              value: devdb@123
+          resources:
+            requests:
+              cpu: 200m
+              memory: 256Mi
+            limits:
+              memory: "256Mi"
+              cpu: "200m"
