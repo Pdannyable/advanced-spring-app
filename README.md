@@ -19,7 +19,7 @@ Create docker image using Dockerfile
 
 
 ```docker
-docker build -t jpizzletech/advanced-spring-app .
+docker build -t pdannyable/advanced-spring-app .
 ```
 
 ## Deploy Application Using Docker Compose 
@@ -33,4 +33,4 @@ docker-compose up -d
 docker ps -a
 ```
 ## License
-[Jpizzle Tech]
+[Upwind Concepts Inc.]
